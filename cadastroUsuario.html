@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Cadastro Usuário</title>
+
+    <link rel="stylesheet" href="./_css/estilo.css">
+    <script src="./_javascript/script.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- <fieldset id="usuario">
+        <legend>Identificação do Usuaári</legend>
+        <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30"
+                placeholder="Nome Completo"> </p>
+                <p><label for="cCpf ou cCnpj" CPF:></label><input type="text" ></p>
+    </fieldset> -->
+
+    <fieldset>
+        <form>
+            <label>Nome:</label>
+            <input type="text id=fNome" placeholder="Informe seu nome Completo">
+            <label>CPF:</label>
+            <input type="text id=fCpf" placeholder="Informe seu CPF">
+            <label>Telefone:</label>
+            <input type="text id=fTel" placeholder="Informe seu telefone">
+            <label>Celular:</label>
+            <input type="text id=fCelular" placeholder="Informe seu Celular">
+            <label>Logradouro:</label>
+            <input type="text id=fRua" placeholder="Informe sua rua / av ou vila">
+
+            <form method="get" action=".">
+                <label>Cep:
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value);" /></label><br />
+                <label>Rua:
+                    <input name="rua" type="text" id="rua" size="60" /></label><br />
+                <label>Bairro:
+                    <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+                <label>Cidade:
+                    <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+                <label>Estado:
+                    <input name="uf" type="text" id="uf" size="2" /></label><br />
+
+            </form>
+
+
+           <!-- <input type="submit" value="Cadastrar"> -->
+
+
+
+        </form>
+
+
+        </form>
+    </fieldset>
+
+
+</body>
+
+</html>
