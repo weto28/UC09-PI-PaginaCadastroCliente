@@ -16,50 +16,97 @@
 
 <body>
 
-    <!-- <fieldset id="usuario">
-        <legend>Identificação do Usuaári</legend>
-        <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30"
-                placeholder="Nome Completo"> </p>
-                <p><label for="cCpf ou cCnpj" CPF:></label><input type="text" ></p>
-    </fieldset> -->
+    <fieldset id="usuario">
 
-    <fieldset>
-        <form>
-            <label>Nome:</label>
-            <input type="text id=fNome" placeholder="Informe seu nome Completo">
-            <label>CPF:</label>
-            <input type="text id=fCpf" placeholder="Informe seu CPF">
-            <label>Telefone:</label>
-            <input type="text id=fTel" placeholder="Informe seu telefone">
-            <label>Celular:</label>
-            <input type="text id=fCelular" placeholder="Informe seu Celular">
-            <label>Logradouro:</label>
-            <input type="text id=fRua" placeholder="Informe sua rua / av ou vila">
-
-            <form method="get" action=".">
-                <label>Cep:
-                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                        onblur="pesquisacep(this.value);" /></label><br />
-                <label>Rua:
-                    <input name="rua" type="text" id="rua" size="60" /></label><br />
-                <label>Bairro:
-                    <input name="bairro" type="text" id="bairro" size="40" /></label><br />
-                <label>Cidade:
-                    <input name="cidade" type="text" id="cidade" size="40" /></label><br />
-                <label>Estado:
-                    <input name="uf" type="text" id="uf" size="2" /></label><br />
-
-            </form>
+        <form onsubmit="return cadastrar();">
 
 
-           <!-- <input type="submit" value="Cadastrar"> -->
 
+            <b>
+                <h1>Seja bem vindo!<h2>Para cadastro, Informe os seguintes dados:</h2>
+                </h1>
+            </b>
+
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="CPF">CPF:</label>
+                        <input type="text id=fCpf" maxlength="40" placeholder="999.999.999-99" required
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" maxlength="35" placeholder="@gmail.com" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Telefone:</label><input type="text id=fTel" maxlength="20" placeholder="(DDD) 9999-9999"
+                            required pattern="\d{2}\s\d{4}-\d{4}">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Celular:</label><input type="text id=fCelular" maxlength="20"
+                            placeholder="(DDD) 99999-9999" required pattern="\d{2}\s\d{5}-\d{4}">
+                    </td>
+                </tr>
+
+                <form method="get" id="fEndereco" action=".">
+                    <tr>
+                        <td> <label>Logradouro:
+                                <input name="rua" type="text" id="rua" size="60" maxlength="60"
+                                    placeholder="Informe sua rua / av ou vila">
+                            </label></td>
+                    </tr>
+
+                    <tr>
+                        <td> <label>Cep:
+                                <input name="cep" type="text"  placeholder="99999-999" id="cep" value=""
+                                    size="10" maxlength="9" onblur="pesquisacep(this.value);" / required
+                                    pattern="\d{5}-\d{3}">
+                            </label></td>
+                    </tr>
+
+                    <tr>
+                        <td> <label>Numero:
+                                <input name="numero" type="number" min="0" max="9999" id="numero" size="40" /></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Bairro:
+                                <input name="bairro" type="text" maxlength="40" id="bairro" size="40"
+                                    disabled /></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label>Cidade:
+                                <input name="cidade" type="text" maxlength="40" id="cidade" size="40"
+                                    disabled /></label>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label>Estado:
+                                <input name="uf" type="text" maxlength="40" id="uf" size="2" disabled /></label>
+
+                        </td>
+                    </tr>
+            </table>
+
+        </form>
+
+        <input type="submit" value="Cadastrar">
 
 
         </form>
 
-
-        </form>
     </fieldset>
 
 
